@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>HOME PAGE</title>
+<link rel='stylesheet' href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+<div>
+    <a href='/login'>LOGIN</a>
+    <a href='/register'>SIGN UP</a>
+</div>
+
+<br>
+{%  for message in get_flashed_messages() %}
+    <h4>{{message}}</h4>
+{% endfor %}
+
+
+</body>
+</html>

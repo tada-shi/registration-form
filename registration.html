@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>REGISTERE</title>
+<link rel='stylesheet' href="{{ url_for('static', filename='form.css') }}">
+</head>
+<body>
+
+{%  for message in get_flashed_messages() %}
+    <h4>{{message}}</h4>
+{% endfor %}
+
+<form action='http://127.0.0.1:5000/register' method='post'>
+    <p><input type='text' name='user_name' placeholder='USERNAME'></p>
+    <p><input type='password' name='pass' placeholder='PASSWORD'></p>
+    <p><input type='password' name='c_pass' placeholder='CONFIRM PASSWORD'></p>
+    <p><input type='email' name='user_email' placeholder='E-MAIL'></p>
+    <input type='submit'>
+</form>
+</body>
+</html>

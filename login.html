@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>LOGIN</title>
+<link rel='stylesheet' href="{{ url_for('static', filename='form.css') }}">
+</head>
+<body>
+
+{%  for message in get_flashed_messages() %}
+    <h4>{{message}}</h4>
+{% endfor %}
+
+<form action='http://127.0.0.1:5000/login' method='post'>
+    <p><input type='text' name='user_name' placeholder='USERNAME'></p>
+    <p><input type='password' name='password' placeholder='PASSWORD'></p>
+    <input type='submit'>
+</form>
+</body>
+</html>

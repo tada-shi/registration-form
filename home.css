@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    text-align: center;
+}
+div{
+    height: 3%;
+    background-color: black;
+    text-align: right;
+    padding: 15px;
+}
+div a{
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+}
+a:hover{
+    color: tomato;
+}
